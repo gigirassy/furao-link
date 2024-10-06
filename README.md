@@ -3,7 +3,9 @@
 furao.link is a dead simple link shortener written with in C++ using the [Crow](https://github.com/CrowCpp/Crow) web framework, and a [fork of NGN's Kisalt](https://github.com/ngn13/kisalt)..
 
 ### Deploy
-First off, clone the repository. Make changes to the interface if needed.
+First off, clone the repository. Or, if you'd like to make changes, fork this and modify accordingly. Then clone.
+
+```git clone https://git.blitzw.in/nune/furao-link```
 
 CD into it.
 
