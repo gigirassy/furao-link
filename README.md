@@ -65,8 +65,7 @@ httpsurlhere.com {
 Now, write out the file, and then type...
 
 ```bash
-caddy reload
-```
+caddy reload```
 
 Bam! You won the game. Now CD out and go ahead with your business.
 
