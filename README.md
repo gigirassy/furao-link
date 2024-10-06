@@ -38,16 +38,22 @@ docker run -d --restart=unless-stopped \
 
 What the hell is NGINX? Just install Caddy.
 
-```apt-get install caddy```
+```bash
+apt-get install caddy
+```
 
 Then, make a little directory for your Caddyfile. It does not have to be in the same directory as furao-link.
 
-```mkdir caddyfiles
-cd caddyfiles```
+```bash
+mkdir caddyfiles
+cd caddyfiles
+```
 
 Now, make a caddyfile. It must be called Caddyfile. Case-sensitive.
 
-```nano Caddyfile```
+```bash
+nano Caddyfile
+```
 
 Type this with the url you specificed (the domain must have the VPS/system IP linked to it, and, again, replace 3402 accordingly:
 
@@ -58,12 +64,12 @@ httpsurlhere.com {
 
 Now, write out the file, and then type...
 
-```caddy reload```
+```bash
+caddy reload```
 
 Bam! You won the game. Now CD out and go ahead with your business.
 
 ### Usage
 You can use the web interface to shorten links, or you can directly use the API:
 ```bash
-curl https://k.example.com/add\?url=<url>
-```
+curl https://k.example.com/add\?url=<url>```
