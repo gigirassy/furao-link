@@ -21,6 +21,7 @@ docker run -d --restart=unless-stopped \
      -v $PWD/data:/data                \
      furao
 ```
+
 Change the `URL` accordingly. Make sure it's https. You can also replace the 3402 with any available port you like.
 
 To disable saving the links, you can use the `NOSAVE` option.
@@ -50,7 +51,8 @@ Now, make a caddyfile. It must be called Caddyfile. Case-sensitive.
 
 Type this with the url you specificed (the domain must have the VPS/system IP linked to it, and, again, replace 3402 accordingly:
 
-```httpsurlhere.com {
+```bash
+httpsurlhere.com {
     reverse_proxy localhost:3402
 }```
 
