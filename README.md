@@ -60,16 +60,19 @@ Type this with the url you specificed (the domain must have the VPS/system IP li
 ```bash
 httpsurlhere.com {
     reverse_proxy localhost:3402
-}```
+}
+```
 
 Now, write out the file, and then type...
 
 ```bash
-caddy reload```
+caddy reload
+```
 
 Bam! You won the game. Now CD out and go ahead with your business.
 
 ### Usage
 You can use the web interface to shorten links, or you can directly use the API:
 ```bash
-curl https://k.example.com/add\?url=<url>```
+curl https://k.example.com/add\?url=<url>
+```
