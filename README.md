@@ -1,15 +1,27 @@
-# furao.link
+# furao.link ![Furao Image](https://git.blitzw.in/nune/furao-link/raw/branch/main/static/furao.png)
 
-furao.link is a dead simple link shortener written with in C++ using the [Crow](https://github.com/CrowCpp/Crow) web framework, and a [fork of NGN's Kisalt](https://github.com/ngn13/kisalt)..
+## Forking on Github to contribute? Please go to git.blitzw.in instead, Github is a mirror to allow for an in-development Quay repository. https://git.blitzw.in/nune/furao-link/
+
+furao.link is a dead simple link shortener written with in C++ using the [Crow](https://github.com/CrowCpp/Crow) web framework, and a [fork of NGN's Kisalt](https://github.com/ngn13/kisalt).
 
 ### Deploy
+First off, clone the repository. Make changes to the interface if needed.
+
+CD into it.
+
+Build your own Docker image with:
+```docker build --tag 'furao' .```
+
+Don't forget the dot at the end.
+
+Then, you do this when it has been built.
 
 ```bash
 docker run -d --restart=unless-stopped \
      -p 3402:8080            \
      -e URL=https://httpsurlhere.com      \
      -v $PWD/data:/data                \
-     quay.io/blitzwin/furao-link
+     furao
 ```
 
 Change the `URL` accordingly. Make sure it's https. You can also replace the 3402 with any available port you like.
@@ -21,7 +33,7 @@ docker run -d --restart=unless-stopped \
     -p 3402:8080             \
     -e URL=https://httpsurlhere.com       \
     -e NOSAVE=1                        \
-    quay.io/blitzwin/furao-link
+    furao
 ```
 
 ### Placing behind reverse proxy
@@ -64,5 +76,5 @@ Bam! You won the game. Now CD out and go ahead with your business.
 ### Usage
 You can use the web interface to shorten links, or you can directly use the API:
 ```bash
-curl https://k.example.com/add?url=<url>
+curl https://k.example.com/add\?url=<url>
 ```
