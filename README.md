@@ -3,25 +3,13 @@
 furao.link is a dead simple link shortener written with in C++ using the [Crow](https://github.com/CrowCpp/Crow) web framework, and a [fork of NGN's Kisalt](https://github.com/ngn13/kisalt)..
 
 ### Deploy
-First off, clone the repository. Or, if you'd like to make changes, fork this and modify accordingly. Then clone.
-
-```git clone https://git.blitzw.in/nune/furao-link```
-
-CD into it.
-
-Build your own Docker image with:
-```docker build --tag 'furao' .```
-
-Don't forget the dot at the end.
-
-Then, you do this when it has been built.
 
 ```bash
 docker run -d --restart=unless-stopped \
      -p 3402:8080            \
      -e URL=https://httpsurlhere.com      \
      -v $PWD/data:/data                \
-     furao
+     quay.io/blitzwin/furao-link
 ```
 
 Change the `URL` accordingly. Make sure it's https. You can also replace the 3402 with any available port you like.
@@ -33,7 +21,7 @@ docker run -d --restart=unless-stopped \
     -p 3402:8080             \
     -e URL=https://httpsurlhere.com       \
     -e NOSAVE=1                        \
-    furao
+    quay.io/blitzwin/furao-link
 ```
 
 ### Placing behind reverse proxy
@@ -76,5 +64,5 @@ Bam! You won the game. Now CD out and go ahead with your business.
 ### Usage
 You can use the web interface to shorten links, or you can directly use the API:
 ```bash
-curl https://k.example.com/add\?url=<url>
+curl https://k.example.com/add?url=<url>
 ```
