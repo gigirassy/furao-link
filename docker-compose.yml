@@ -1,0 +1,12 @@
+name: furao-link
+services:
+    furao-link:
+        restart: unless-stopped
+        ports:
+            - 3402:8080
+        environment:
+            - URL=https://httpsurlhere.com 
+            # Change the above!
+        volumes:
+            - $PWD/data:/data
+        image: quay.io/blitzwin/furao-link
