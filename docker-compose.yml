@@ -4,6 +4,7 @@ services:
         restart: unless-stopped
         ports:
             - 3402:8080
+            # Replace 3402 with the port you want if needed!
         environment:
             - URL=https://httpsurlhere.com 
             # Change the above!
