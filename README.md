@@ -1,8 +1,10 @@
-# furao.link ![Furao Image](https://git.blitzw.in/nune/furao-link/raw/branch/main/static/furao.png)
+# furao.link ![Furao Image](https://git.private.coffee/blitzwing/furao-link/raw/branch/main/static/furao.png)
 
-## Forking on Github to contribute? Please go to git.blitzw.in instead, Github is a mirror to allow for an in-development Quay repository. https://git.blitzw.in/nune/furao-link/
+## Forking on Github to contribute? Please go to git.private.coffee instead, Github is a mirror to allow for an in-development Quay repository. https://git.private.coffee/blitzwing/furao-link/
 
 furao.link is a dead simple link shortener written with in C++ using the [Crow](https://github.com/CrowCpp/Crow) web framework, and a [fork of NGN's Kisalt](https://github.com/ngn13/kisalt).
+
+Moved from a personal ForgeJo to Private.Coffee's because you all can't behave.
 
 ### Deploy
 First off, clone the repository. Make changes to the interface if needed.
